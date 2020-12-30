@@ -1,0 +1,115 @@
+/* CONFIGURAÇÃO DE ESTILO */
+
+/* declarando variáveis do CSS. Ideal quando já souber cores padrão do site */
+:root{
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+/* zerando estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* elementos base do CSS */
+body {
+    background: var(--preta); /* acessando valor da variável preta */
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex; /* alinhar elementos em linha */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* itens do menu à direita */
+}
+
+/* logo - nome netflix */
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+/* navegação do menu */
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #FFF;
+}
+
+/* filme principal */
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url("/img/capa-house.jpg");
+    height: 400px;
+    background-size: cover; /* especificando tamanho da imagem */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* começar da esquerda pra direita */
+}
+
+/* espaçamento da descrição dos botões */
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.botao {
+    background-color: rgba(0, 0, 0, .50 );
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    border-radius: 20px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+/* fazer algo toda vez que o mouse passar sobre os botôes */
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+/* tamanho das imagens do carrosel */
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
